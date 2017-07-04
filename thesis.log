@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2017.7.4)  4 JUL 2017 10:03
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2017.7.4)  4 JUL 2017 10:08
 entering extended mode
 **./thesis.tex
 (thesis.tex
@@ -2461,11 +2461,11 @@ Package rerunfilecheck Info: File `thesis.out' has not changed.
 (rerunfilecheck)             Checksum: 6619505D772170E75E03DC8282DCDC2D;10122.
  ) 
 Here is how much of TeX's memory you used:
- 31432 strings out of 493314
- 544463 string characters out of 3128903
+ 31435 strings out of 493314
+ 544490 string characters out of 3128903
  805225 words of memory out of 3000000
  33812 multiletter control sequences out of 15000+200000
- 620635 words of font info for 318 fonts, out of 3000000 for 9000
+ 620860 words of font info for 320 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  55i,12n,92p,10385b,2359s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Users/CeliaME/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/base/8r.e
@@ -2484,7 +2484,7 @@ cal/Programs/MiKTeX 2.9/fonts/type1/urw/times/utmb8a.pfb><C:/Users/CeliaME/AppD
 ata/Local/Programs/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pfb><C:/Users/CeliaM
 E/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/urw/times/utmri8a.pfb><C:/Users
 /CeliaME/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/wasy/wasy10.pfb>
-Output written on thesis.pdf (65 pages, 2259474 bytes).
+Output written on thesis.pdf (65 pages, 2259480 bytes).
 PDF statistics:
  1255 PDF objects out of 1440 (max. 8388607)
  358 named destinations out of 1000 (max. 500000)
