@@ -1,0 +1,35 @@
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {1.1}{\ignorespaces Waterfall Model\relax }}{1}{figure.caption.7}
+\contentsline {figure}{\numberline {1.2}{\ignorespaces V-Model\relax }}{2}{figure.caption.8}
+\contentsline {figure}{\numberline {1.3}{\ignorespaces Requirement specialization\relax }}{6}{figure.caption.9}
+\contentsline {figure}{\numberline {1.4}{\ignorespaces Off-line, Passive On-line and Active On-line monitors from \citep {maler2008checking}\relax }}{7}{figure.caption.10}
+\contentsline {figure}{\numberline {1.5}{\ignorespaces Framework\relax }}{9}{figure.caption.11}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Modeling\relax }}{11}{figure.caption.12}
+\contentsline {figure}{\numberline {2.2}{\ignorespaces Elements of MBD\relax }}{13}{figure.caption.15}
+\contentsline {figure}{\numberline {2.3}{\ignorespaces Hybrid System Structure\relax }}{18}{figure.caption.22}
+\contentsline {figure}{\numberline {2.4}{\ignorespaces Hybrid System: Tick Generator\relax }}{20}{figure.caption.25}
+\contentsline {figure}{\numberline {2.5}{\ignorespaces Tick Generator Internals\relax }}{20}{figure.caption.26}
+\contentsline {figure}{\numberline {2.6}{\ignorespaces Hybrid System: Bouncing Ball\relax }}{21}{figure.caption.28}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {3.1}{\ignorespaces CTL formulas\relax }}{26}{figure.caption.32}
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Property Scopes\relax }}{31}{figure.caption.37}
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Pattern Hierarchy\relax }}{32}{figure.caption.38}
+\contentsline {figure}{\numberline {3.4}{\ignorespaces Rise Time\relax }}{34}{figure.caption.40}
+\contentsline {figure}{\numberline {3.5}{\ignorespaces Overshoot\relax }}{35}{figure.caption.41}
+\contentsline {figure}{\numberline {3.6}{\ignorespaces Settling Time\relax }}{36}{figure.caption.42}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Requirement Framework\relax }}{38}{figure.caption.48}
+\contentsline {figure}{\numberline {4.2}{\ignorespaces STL Simulink\relax }}{43}{figure.caption.56}
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Test of STL Always-Eventually\relax }}{44}{figure.caption.58}
+\contentsline {figure}{\numberline {4.4}{\ignorespaces Until Simulation\relax }}{45}{figure.caption.59}
+\contentsline {figure}{\numberline {4.5}{\ignorespaces Timed Until Implementation\relax }}{45}{figure.caption.61}
+\contentsline {figure}{\numberline {4.6}{\ignorespaces System Performance Control Library\relax }}{46}{figure.caption.62}
+\contentsline {figure}{\numberline {4.7}{\ignorespaces Input References\relax }}{47}{figure.caption.64}
+\contentsline {figure}{\numberline {4.8}{\ignorespaces Detector's masks\relax }}{48}{figure.caption.66}
+\contentsline {figure}{\numberline {4.9}{\ignorespaces Detectors' time behavior\relax }}{48}{figure.caption.67}
+\contentsline {figure}{\numberline {4.10}{\ignorespaces Ramp Detector Implementation\relax }}{49}{figure.caption.68}
+\contentsline {figure}{\numberline {4.11}{\ignorespaces Overshoot Blocks' Masks\relax }}{50}{figure.caption.71}
+\contentsline {figure}{\numberline {4.12}{\ignorespaces Overshoots' Time response\relax }}{50}{figure.caption.73}
+\contentsline {figure}{\numberline {4.13}{\ignorespaces Overshoots' Implementations\relax }}{51}{figure.caption.74}
+\contentsline {figure}{\numberline {4.14}{\ignorespaces Factory\relax }}{53}{figure.caption.76}
