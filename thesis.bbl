@@ -10,6 +10,10 @@ Rajeev Alur, Tom{\'a}s Feder, and Thomas~A Henzinger.
 \newblock The benefits of relaxing punctuality.
 \newblock {\em Journal of the ACM (JACM)}, 43(1):116--146, 1996.
 
+\bibitem[ANT]{ANTLR}
+Antlr.
+\newblock \url{http://www.antlr.org/}.
+
 \bibitem[bal]{balsrepo}
 Alessio balsini repo.
 \newblock \url{https://github.com/balsini/SignalTemplateLibraryAutogen/}.
@@ -26,6 +30,11 @@ Alessio Balsini, Marco Di~Natale, Marco Celia, and Vassilios Tsachouridis.
 \newblock Generation of simulink monitors for control applications from formal
   requirements.
 \newblock 2017.
+
+\bibitem[Beh06]{behboodian2006model}
+Ali Behboodian.
+\newblock Model-based design.
+\newblock {\em DSP Magazine (May 2006)}, 2006.
 
 \bibitem[BFM{\etalchar{+}}08]{benvenuti2008contract}
 Luca Benvenuti, Alberto Ferrari, Leonardo Mangeruca, Emanuele Mazzi, Roberto

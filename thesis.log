@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2017.7.4)  4 JUL 2017 10:08
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2017.7.4)  5 JUL 2017 19:05
 entering extended mode
 **./thesis.tex
 (thesis.tex
@@ -1909,7 +1909,7 @@ No file thesis.nls.
 
  (Chapters/introduction.tex
 Chapter 1.
-<Figs/waterfall.png, id=392, 426.09187pt x 239.39438pt>
+<Figs/waterfall.png, id=396, 426.09187pt x 239.39438pt>
 File: Figs/waterfall.png Graphic file (type png)
 <use Figs/waterfall.png>
 Package pdftex.def Info: Figs/waterfall.png  used on input line 21. on input li
@@ -1921,7 +1921,7 @@ e 21.
 
 
  <./Figs/waterfall.png>]
-<Figs/vmodel.png, id=399, 672.26157pt x 392.96812pt>
+<Figs/vmodel.png, id=403, 672.26157pt x 392.96812pt>
 File: Figs/vmodel.png Graphic file (type png)
 <use Figs/vmodel.png>
 Package pdftex.def Info: Figs/vmodel.png  used on input line 31. on input line 
@@ -1931,7 +1931,7 @@ e 31.
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <14.4> not available
 (Font)              Font shape `T1/ptm/b/n' tried instead on input line 40.
  [2 <./Figs/vmodel.png>] [3] [4]
-<Figs/specialization.png, id=428, 263.48438pt x 263.48438pt>
+<Figs/specialization.png, id=432, 263.48438pt x 263.48438pt>
 File: Figs/specialization.png Graphic file (type png)
 <use Figs/specialization.png>
 Package pdftex.def Info: Figs/specialization.png  used on input line 100. on in
@@ -1939,7 +1939,7 @@ put line 100.
 Package pdftex.def Info: Requested size: 174.98177pt x 174.98975pt on input lin
 e 100.
  [5] [6 <./Figs/specialization.png>]
-<Figs/monitortypes.png, id=440, 494.59781pt x 298.86656pt>
+<Figs/monitortypes.png, id=444, 494.59781pt x 298.86656pt>
 File: Figs/monitortypes.png Graphic file (type png)
 <use Figs/monitortypes.png>
 Package pdftex.def Info: Figs/monitortypes.png  used on input line 119. on inpu
@@ -1947,7 +1947,7 @@ t line 119.
 Package pdftex.def Info: Requested size: 349.97023pt x 211.47163pt on input lin
 e 119.
  [7 <./Figs/monitortypes.png>] [8]
-<Figs/framework.png, id=466, 554.82281pt x 317.68687pt>
+<Figs/framework.png, id=470, 554.82281pt x 317.68687pt>
 File: Figs/framework.png Graphic file (type png)
 <use Figs/framework.png>
 Package pdftex.def Info: Figs/framework.png  used on input line 140. on input l
@@ -1960,7 +1960,7 @@ e 140.
 
  (Chapters/mbd_and_hs.tex
 Chapter 2.
-<Figs/models.PNG, id=476, 604.50844pt x 341.77687pt>
+<Figs/models.PNG, id=480, 604.50844pt x 341.77687pt>
 File: Figs/models.PNG Graphic file (type png)
 <use Figs/models.PNG>
 Package pdftex.def Info: Figs/models.PNG  used on input line 6. on input line 6
@@ -1972,7 +1972,7 @@ e 6.
 
 
  <./Figs/models.PNG>] [12]
-<Figs/elementsMBD.PNG, id=496, 347.04657pt x 331.99031pt>
+<Figs/elementsMBD.PNG, id=500, 347.04657pt x 331.99031pt>
 File: Figs/elementsMBD.PNG Graphic file (type png)
 <use Figs/elementsMBD.PNG>
 Package pdftex.def Info: Figs/elementsMBD.PNG  used on input line 24. on input 
@@ -1980,7 +1980,7 @@ line 24.
 Package pdftex.def Info: Requested size: 218.73056pt x 209.24617pt on input lin
 e 24.
  [13 <./Figs/elementsMBD.PNG>] [14] [15] [16]
-<Figs/HS.PNG, id=529, 606.76688pt x 298.86656pt>
+<Figs/HS.PNG, id=535, 606.76688pt x 298.86656pt>
 File: Figs/HS.PNG Graphic file (type png)
 <use Figs/HS.PNG>
 Package pdftex.def Info: Figs/HS.PNG  used on input line 141. on input line 141
@@ -1989,28 +1989,28 @@ Package pdftex.def Info: Requested size: 437.46112pt x 215.4756pt on input line
  141.
 
 [17] [18 <./Figs/HS.PNG>] [19]
-<Figs/tickgen.PNG, id=554, 492.33937pt x 308.65312pt>
+<Figs/tickgen.PNG, id=560, 492.33937pt x 308.65312pt>
 File: Figs/tickgen.PNG Graphic file (type png)
 <use Figs/tickgen.PNG>
 Package pdftex.def Info: Figs/tickgen.PNG  used on input line 185. on input lin
 e 185.
 Package pdftex.def Info: Requested size: 306.22144pt x 191.97992pt on input lin
 e 185.
-<Figs/tickgenmode.PNG, id=555, 223.58531pt x 115.18031pt>
+<Figs/tickgenmode.PNG, id=561, 223.58531pt x 115.18031pt>
 File: Figs/tickgenmode.PNG Graphic file (type png)
 <use Figs/tickgenmode.PNG>
 Package pdftex.def Info: Figs/tickgenmode.PNG  used on input line 194. on input
  line 194.
 Package pdftex.def Info: Requested size: 131.23967pt x 67.60954pt on input line
  194.
-<Figs/tickgenstate.PNG, id=556, 223.58531pt x 102.3825pt>
+<Figs/tickgenstate.PNG, id=562, 223.58531pt x 102.3825pt>
 File: Figs/tickgenstate.PNG Graphic file (type png)
 <use Figs/tickgenstate.PNG>
 Package pdftex.def Info: Figs/tickgenstate.PNG  used on input line 200. on inpu
 t line 200.
 Package pdftex.def Info: Requested size: 131.23967pt x 60.09738pt on input line
  200.
-<Figs/tickgenout.PNG, id=557, 241.65282pt x 97.11281pt>
+<Figs/tickgenout.PNG, id=563, 241.65282pt x 97.11281pt>
 File: Figs/tickgenout.PNG Graphic file (type png)
 <use Figs/tickgenout.PNG>
 Package pdftex.def Info: Figs/tickgenout.PNG  used on input line 206. on input 
@@ -2019,14 +2019,14 @@ Package pdftex.def Info: Requested size: 131.23967pt x 52.74242pt on input line
  206.
  [20 <./Figs/tickgen.PNG> <./Figs/tickgenmode.PNG> <./Figs/tickgenstate.PNG> <.
 /Figs/tickgenout.PNG>]
-<Figs/bounball.png, id=568, 364.36125pt x 335.00156pt>
+<Figs/bounball.png, id=574, 364.36125pt x 335.00156pt>
 File: Figs/bounball.png Graphic file (type png)
 <use Figs/bounball.png>
 Package pdftex.def Info: Figs/bounball.png  used on input line 219. on input li
 ne 219.
 Package pdftex.def Info: Requested size: 196.85616pt x 180.99014pt on input lin
 e 219.
-<Figs/bounballout.png, id=569, 290.58563pt x 297.36093pt>
+<Figs/bounballout.png, id=575, 290.58563pt x 297.36093pt>
 File: Figs/bounballout.png Graphic file (type png)
 <use Figs/bounballout.png>
 Package pdftex.def Info: Figs/bounballout.png  used on input line 224. on input
@@ -2061,7 +2061,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 88--90
  []
 
 [25]
-<Figs/ctl.PNG, id=611, 667.74469pt x 398.99063pt>
+<Figs/ctl.PNG, id=617, 667.74469pt x 398.99063pt>
 File: Figs/ctl.PNG Graphic file (type png)
 <use Figs/ctl.PNG>
 Package pdftex.def Info: Figs/ctl.PNG  used on input line 98. on input line 98.
@@ -2069,7 +2069,7 @@ Package pdftex.def Info: Figs/ctl.PNG  used on input line 98. on input line 98.
 Package pdftex.def Info: Requested size: 393.71233pt x 235.25632pt on input lin
 e 98.
  [26 <./Figs/ctl.PNG>] [27] [28] [29] [30]
-<Figs/scopes.PNG, id=658, 477.28313pt x 243.91125pt>
+<Figs/scopes.PNG, id=664, 477.28313pt x 243.91125pt>
 File: Figs/scopes.PNG Graphic file (type png)
 <use Figs/scopes.PNG>
 Package pdftex.def Info: Figs/scopes.PNG  used on input line 181. on input line
@@ -2077,7 +2077,7 @@ Package pdftex.def Info: Figs/scopes.PNG  used on input line 181. on input line
 Package pdftex.def Info: Requested size: 306.22144pt x 156.48972pt on input lin
 e 181.
  [31 <./Figs/scopes.PNG>]
-<Figs/hierarchy.PNG, id=666, 1076.52188pt x 283.81032pt>
+<Figs/hierarchy.PNG, id=672, 1076.52188pt x 283.81032pt>
 File: Figs/hierarchy.PNG Graphic file (type png)
 <use Figs/hierarchy.PNG>
 Package pdftex.def Info: Figs/hierarchy.PNG  used on input line 203. on input l
@@ -2090,14 +2090,14 @@ Underfull \hbox (badness 10000) in paragraph at lines 216--234
  []
 
 [32 <./Figs/hierarchy.PNG>] [33]
-<Figs/risetime.PNG, id=684, 389.95688pt x 305.64188pt>
+<Figs/risetime.PNG, id=690, 389.95688pt x 305.64188pt>
 File: Figs/risetime.PNG Graphic file (type png)
 <use Figs/risetime.PNG>
 Package pdftex.def Info: Figs/risetime.PNG  used on input line 256. on input li
 ne 256.
 Package pdftex.def Info: Requested size: 262.47934pt x 205.73505pt on input lin
 e 256.
-<Figs/overshoot.PNG, id=685, 391.4625pt x 312.41719pt>
+<Figs/overshoot.PNG, id=691, 391.4625pt x 312.41719pt>
 File: Figs/overshoot.PNG Graphic file (type png)
 <use Figs/overshoot.PNG>
 Package pdftex.def Info: Figs/overshoot.PNG  used on input line 262. on input l
@@ -2108,7 +2108,7 @@ e 262.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<Figs/settime.PNG, id=686, 382.42876pt x 307.90031pt>
+<Figs/settime.PNG, id=692, 382.42876pt x 307.90031pt>
 File: Figs/settime.PNG Graphic file (type png)
 <use Figs/settime.PNG>
 Package pdftex.def Info: Figs/settime.PNG  used on input line 268. on input lin
@@ -2121,7 +2121,7 @@ e 268.
 
  (Chapters/framework.tex
 Chapter 4.
-<Figs/tool.PNG, id=723, 641.39626pt x 420.82219pt>
+<Figs/tool.PNG, id=729, 641.39626pt x 420.82219pt>
 File: Figs/tool.PNG Graphic file (type png)
 <use Figs/tool.PNG>
 Package pdftex.def Info: Figs/tool.PNG  used on input line 8. on input line 8.
@@ -2151,7 +2151,7 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <6> not available
 1.sty"
 File: lstlang1.sty 2015/06/04 1.6 listings language file
 ) [42]
-<Figs/stlib.PNG, id=824, 737.00343pt x 292.09125pt>
+<Figs/stlib.PNG, id=830, 737.00343pt x 292.09125pt>
 File: Figs/stlib.PNG Graphic file (type png)
 <use Figs/stlib.PNG>
 Package pdftex.def Info: Figs/stlib.PNG  used on input line 121. on input line 
@@ -2168,7 +2168,7 @@ Package epstopdf Info: Source file: <Figs/testalw.eps>
 to.pdf Figs/testalw.eps>
 (epstopdf)             \includegraphics on input line 133.
 Package epstopdf Info: Output file is already uptodate.
-<Figs/testalw-eps-converted-to.pdf, id=826, pagebox=cropbox, 485.815pt x 419.56
+<Figs/testalw-eps-converted-to.pdf, id=832, pagebox=cropbox, 485.815pt x 419.56
 75pt>
 File: Figs/testalw-eps-converted-to.pdf Graphic file (type pdf)
 <use Figs/testalw-eps-converted-to.pdf>
@@ -2186,7 +2186,7 @@ Package epstopdf Info: Source file: <Figs/testev.eps>
 o.pdf Figs/testev.eps>
 (epstopdf)             \includegraphics on input line 138.
 Package epstopdf Info: Output file is already uptodate.
-<Figs/testev-eps-converted-to.pdf, id=827, pagebox=cropbox, 611.28375pt x 419.5
+<Figs/testev-eps-converted-to.pdf, id=833, pagebox=cropbox, 611.28375pt x 419.5
 675pt>
 File: Figs/testev-eps-converted-to.pdf Graphic file (type pdf)
 <use Figs/testev-eps-converted-to.pdf>
@@ -2205,7 +2205,7 @@ Package epstopdf Info: Source file: <Figs/testunt.eps>
 to.pdf Figs/testunt.eps>
 (epstopdf)             \includegraphics on input line 151.
 Package epstopdf Info: Output file is already uptodate.
-<Figs/testunt-eps-converted-to.pdf, id=839, pagebox=cropbox, 1016.79875pt x 479
+<Figs/testunt-eps-converted-to.pdf, id=845, pagebox=cropbox, 1016.79875pt x 479
 .7925pt>
 File: Figs/testunt-eps-converted-to.pdf Graphic file (type pdf)
 <use Figs/testunt-eps-converted-to.pdf>
@@ -2218,7 +2218,7 @@ e 151.
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 [44 <./Figs/testalw-eps-converted-to.pdf> <./Figs/testev-eps-converted-to.pdf>]
-<Figs/untimpl.png, id=883, 992.20688pt x 451.6875pt>
+<Figs/untimpl.png, id=889, 992.20688pt x 451.6875pt>
 File: Figs/untimpl.png Graphic file (type png)
 <use Figs/untimpl.png>
 Package pdftex.def Info: Figs/untimpl.png  used on input line 161. on input lin
@@ -2226,14 +2226,14 @@ e 161.
 Package pdftex.def Info: Requested size: 437.46112pt x 199.14975pt on input lin
 e 161.
 [45 <./Figs/testunt-eps-converted-to.pdf> <./Figs/untimpl.png>]
-<Figs/spclib.PNG, id=915, 852.93657pt x 279.29344pt>
+<Figs/spclib.PNG, id=921, 852.93657pt x 279.29344pt>
 File: Figs/spclib.PNG Graphic file (type png)
 <use Figs/spclib.PNG>
 Package pdftex.def Info: Figs/spclib.PNG  used on input line 172. on input line
  172.
 Package pdftex.def Info: Requested size: 437.46112pt x 143.24748pt on input lin
 e 172.
-<Figs/ratelim2.PNG, id=919, 142.28156pt x 54.2025pt>
+<Figs/ratelim2.PNG, id=925, 142.28156pt x 54.2025pt>
 File: Figs/ratelim2.PNG Graphic file (type png)
 <use Figs/ratelim2.PNG>
 Package pdftex.def Info: Figs/ratelim2.PNG  used on input line 185. on input li
@@ -2250,7 +2250,7 @@ Package epstopdf Info: Source file: <Figs/ratelimsim.eps>
 ed-to.pdf Figs/ratelimsim.eps>
 (epstopdf)             \includegraphics on input line 188.
 Package epstopdf Info: Output file is already uptodate.
-<Figs/ratelimsim-eps-converted-to.pdf, id=920, pagebox=cropbox, 325.215pt x 126
+<Figs/ratelimsim-eps-converted-to.pdf, id=926, pagebox=cropbox, 325.215pt x 126
 .4725pt>
 File: Figs/ratelimsim-eps-converted-to.pdf Graphic file (type pdf)
 <use Figs/ratelimsim-eps-converted-to.pdf>
@@ -2258,7 +2258,7 @@ Package pdftex.def Info: Figs/ratelimsim-eps-converted-to.pdf  used on input li
 ne 188. on input line 188.
 Package pdftex.def Info: Requested size: 209.97946pt x 81.66pt on input line 18
 8.
-<Figs/pulse.PNG, id=921, 143.78719pt x 81.30376pt>
+<Figs/pulse.PNG, id=927, 143.78719pt x 81.30376pt>
 File: Figs/pulse.PNG Graphic file (type png)
 <use Figs/pulse.PNG>
 Package pdftex.def Info: Figs/pulse.PNG  used on input line 196. on input line 
@@ -2275,7 +2275,7 @@ Package epstopdf Info: Source file: <Figs/pulsesim.eps>
 -to.pdf Figs/pulsesim.eps>
 (epstopdf)             \includegraphics on input line 199.
 Package epstopdf Info: Output file is already uptodate.
-<Figs/pulsesim-eps-converted-to.pdf, id=922, pagebox=cropbox, 325.215pt x 126.4
+<Figs/pulsesim-eps-converted-to.pdf, id=928, pagebox=cropbox, 325.215pt x 126.4
 725pt>
 File: Figs/pulsesim-eps-converted-to.pdf Graphic file (type pdf)
 <use Figs/pulsesim-eps-converted-to.pdf>
@@ -2284,14 +2284,14 @@ Package pdftex.def Info: Figs/pulsesim-eps-converted-to.pdf  used on input line
 Package pdftex.def Info: Requested size: 209.97946pt x 81.66pt on input line 19
 9.
  [46 <./Figs/spclib.PNG>]
-<Figs/stepmask.PNG, id=929, 295.1025pt x 196.48407pt>
+<Figs/stepmask.PNG, id=935, 295.1025pt x 196.48407pt>
 File: Figs/stepmask.PNG Graphic file (type png)
 <use Figs/stepmask.PNG>
 Package pdftex.def Info: Figs/stepmask.PNG  used on input line 215. on input li
 ne 215.
 Package pdftex.def Info: Requested size: 209.97946pt x 139.81046pt on input lin
 e 215.
-<Figs/rampmask.PNG, id=930, 323.70938pt x 285.31593pt>
+<Figs/rampmask.PNG, id=936, 323.70938pt x 285.31593pt>
 File: Figs/rampmask.PNG Graphic file (type png)
 <use Figs/rampmask.PNG>
 Package pdftex.def Info: Figs/rampmask.PNG  used on input line 220. on input li
@@ -2308,7 +2308,7 @@ Package epstopdf Info: Source file: <Figs/stepdetsim.eps>
 ed-to.pdf Figs/stepdetsim.eps>
 (epstopdf)             \includegraphics on input line 231.
 Package epstopdf Info: Output file is already uptodate.
-<Figs/stepdetsim-eps-converted-to.pdf, id=933, pagebox=cropbox, 541.02126pt x 3
+<Figs/stepdetsim-eps-converted-to.pdf, id=939, pagebox=cropbox, 541.02126pt x 3
 68.37625pt>
 File: Figs/stepdetsim-eps-converted-to.pdf Graphic file (type pdf)
 <use Figs/stepdetsim-eps-converted-to.pdf>
@@ -2326,7 +2326,7 @@ Package epstopdf Info: Source file: <Figs/rampdetsim.eps>
 ed-to.pdf Figs/rampdetsim.eps>
 (epstopdf)             \includegraphics on input line 235.
 Package epstopdf Info: Output file is already uptodate.
-<Figs/rampdetsim-eps-converted-to.pdf, id=934, pagebox=cropbox, 389.455pt x 260
+<Figs/rampdetsim-eps-converted-to.pdf, id=940, pagebox=cropbox, 389.455pt x 260
 .975pt>
 File: Figs/rampdetsim-eps-converted-to.pdf Graphic file (type pdf)
 <use Figs/rampdetsim-eps-converted-to.pdf>
@@ -2340,7 +2340,7 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 [47 <./Figs/ratelim2.PNG> <./Figs/ratelimsim-eps-converted-to.pdf> <./Figs/puls
 e.PNG> <./Figs/pulsesim-eps-converted-to.pdf>]
-<Figs/rampimpl.png, id=961, 602.25pt x 451.6875pt>
+<Figs/rampimpl.png, id=967, 602.25pt x 451.6875pt>
 File: Figs/rampimpl.png Graphic file (type png)
 <use Figs/rampimpl.png>
 Package pdftex.def Info: Figs/rampimpl.png  used on input line 249. on input li
@@ -2349,14 +2349,14 @@ Package pdftex.def Info: Requested size: 437.46112pt x 328.10947pt on input lin
 e 249.
  [48 <./Figs/stepmask.PNG> <./Figs/rampmask.PNG> <./Figs/stepdetsim-eps-convert
 ed-to.pdf> <./Figs/rampdetsim-eps-converted-to.pdf>]
-<Figs/sovmask.PNG, id=991, 322.95656pt x 373.395pt>
+<Figs/sovmask.PNG, id=997, 322.95656pt x 373.395pt>
 File: Figs/sovmask.PNG Graphic file (type png)
 <use Figs/sovmask.PNG>
 Package pdftex.def Info: Figs/sovmask.PNG  used on input line 259. on input lin
 e 259.
 Package pdftex.def Info: Requested size: 174.98177pt x 202.3083pt on input line
  259.
-<Figs/tovmask.PNG, id=992, 322.95656pt x 331.2375pt>
+<Figs/tovmask.PNG, id=998, 322.95656pt x 331.2375pt>
 File: Figs/tovmask.PNG Graphic file (type png)
 <use Figs/tovmask.PNG>
 Package pdftex.def Info: Figs/tovmask.PNG  used on input line 265. on input lin
@@ -2373,8 +2373,8 @@ Package epstopdf Info: Source file: <Figs/sovsim.eps>
 o.pdf Figs/sovsim.eps>
 (epstopdf)             \includegraphics on input line 276.
 Package epstopdf Info: Output file is already uptodate.
-<Figs/sovsim-eps-converted-to.pdf, id=994, pagebox=cropbox, 322.20375pt x 395.4
-775pt>
+<Figs/sovsim-eps-converted-to.pdf, id=1000, pagebox=cropbox, 322.20375pt x 395.
+4775pt>
 File: Figs/sovsim-eps-converted-to.pdf Graphic file (type pdf)
 <use Figs/sovsim-eps-converted-to.pdf>
 Package pdftex.def Info: Figs/sovsim-eps-converted-to.pdf  used on input line 2
@@ -2391,8 +2391,8 @@ Package epstopdf Info: Source file: <Figs/tovsim.eps>
 o.pdf Figs/tovsim.eps>
 (epstopdf)             \includegraphics on input line 281.
 Package epstopdf Info: Output file is already uptodate.
-<Figs/tovsim-eps-converted-to.pdf, id=995, pagebox=cropbox, 322.20375pt x 395.4
-775pt>
+<Figs/tovsim-eps-converted-to.pdf, id=1001, pagebox=cropbox, 322.20375pt x 395.
+4775pt>
 File: Figs/tovsim-eps-converted-to.pdf Graphic file (type pdf)
 <use Figs/tovsim-eps-converted-to.pdf>
 Package pdftex.def Info: Figs/tovsim-eps-converted-to.pdf  used on input line 2
@@ -2401,14 +2401,14 @@ Package pdftex.def Info: Requested size: 196.85616pt x 241.63316pt on input lin
 e 281.
  [49 <./Figs/rampimpl.png>] [50 <./Figs/sovmask.PNG> <./Figs/tovmask.PNG> <./Fi
 gs/sovsim-eps-converted-to.pdf> <./Figs/tovsim-eps-converted-to.pdf>]
-<Figs/sovimpl.png, id=1032, 493.0922pt x 511.9125pt>
+<Figs/sovimpl.png, id=1038, 493.0922pt x 511.9125pt>
 File: Figs/sovimpl.png Graphic file (type png)
 <use Figs/sovimpl.png>
 Package pdftex.def Info: Figs/sovimpl.png  used on input line 299. on input lin
 e 299.
 Package pdftex.def Info: Requested size: 209.97946pt x 217.99345pt on input lin
 e 299.
-<Figs/tovimpl.png, id=1033, 489.32813pt x 569.12625pt>
+<Figs/tovimpl.png, id=1039, 489.32813pt x 569.12625pt>
 File: Figs/tovimpl.png Graphic file (type png)
 <use Figs/tovimpl.png>
 Package pdftex.def Info: Figs/tovimpl.png  used on input line 304. on input lin
@@ -2422,34 +2422,65 @@ n
  []
 
 [52]
-<Figs/factory2.png, id=1046, 456.95718pt x 315.42844pt>
+<Figs/factory2.png, id=1053, 456.95718pt x 315.42844pt>
 File: Figs/factory2.png Graphic file (type png)
 <use Figs/factory2.png>
 Package pdftex.def Info: Figs/factory2.png  used on input line 337. on input li
 ne 337.
 Package pdftex.def Info: Requested size: 306.22144pt x 211.38408pt on input lin
 e 337.
- [53 <./Figs/factory2.png>]
+
 ("C:\Users\CeliaME\AppData\Local\Programs\MiKTeX 2.9\tex\latex\listings\lstlang
 1.sty"
 File: lstlang1.sty 2015/06/04 1.6 listings language file
-) [54]) [55]
+) [53 <./Figs/factory2.png>] [54]
+<Figs/nodesimple.PNG, id=1106, 280.04625pt x 247.67531pt>
+File: Figs/nodesimple.PNG Graphic file (type png)
+<use Figs/nodesimple.PNG>
+Package pdftex.def Info: Figs/nodesimple.PNG  used on input line 407. on input 
+line 407.
+Package pdftex.def Info: Requested size: 174.98177pt x 154.76266pt on input lin
+e 407.
+<Figs/visitor.PNG, id=1109, 469.00218pt x 196.48407pt>
+File: Figs/visitor.PNG Graphic file (type png)
+<use Figs/visitor.PNG>
+Package pdftex.def Info: Figs/visitor.PNG  used on input line 415. on input lin
+e 415.
+Package pdftex.def Info: Requested size: 209.97946pt x 87.96729pt on input line
+ 415.
+<Figs/nodeVisitor.PNG, id=1110, 365.86688pt x 158.09062pt>
+File: Figs/nodeVisitor.PNG Graphic file (type png)
+<use Figs/nodeVisitor.PNG>
+Package pdftex.def Info: Figs/nodeVisitor.PNG  used on input line 420. on input
+ line 420.
+Package pdftex.def Info: Requested size: 209.97946pt x 90.73253pt on input line
+ 420.
+
+
+Package natbib Warning: Citation `antlr' on page 55 undefined on input line 425
+.
+
+[55 <./Figs/nodesimple.PNG>]) [56 <./Figs/visitor.PNG> <./Figs/nodeVisitor.PNG>
+]
 \openout2 = `Chapters/conclusions.aux'.
 
  (Chapters/conclusions.tex) (thesis.bbl
-Underfull \hbox (badness 10000) in paragraph at lines 14--16
+Underfull \hbox (badness 10000) in paragraph at lines 18--20
 []\T1/ptm/m/n/12 (+20) Alessio balsini repo.  [][]$https : / / github . com / b
 alsini /
  []
 
-[56
+[57
 
 
 
 
 
-]) [57]
+]) [58]
 No file thesis.ind.
+
+Package natbib Warning: There were undefined citations.
+
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 172.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 172.
 (thesis.aux (Dedication/dedication.aux) (Acknowledgement/acknowledgement.aux)
@@ -2458,14 +2489,14 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 172.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 172.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 172.
 Package rerunfilecheck Info: File `thesis.out' has not changed.
-(rerunfilecheck)             Checksum: 6619505D772170E75E03DC8282DCDC2D;10122.
+(rerunfilecheck)             Checksum: 34BBBFCC0A71BA88D40A0545AB5EA3EC;10122.
  ) 
 Here is how much of TeX's memory you used:
- 31435 strings out of 493314
- 544490 string characters out of 3128903
- 805225 words of memory out of 3000000
- 33812 multiletter control sequences out of 15000+200000
- 620860 words of font info for 320 fonts, out of 3000000 for 9000
+ 31472 strings out of 493314
+ 545150 string characters out of 3128903
+ 805563 words of memory out of 3000000
+ 33837 multiletter control sequences out of 15000+200000
+ 621085 words of font info for 322 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  55i,12n,92p,10385b,2359s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Users/CeliaME/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/base/8r.e
@@ -2484,9 +2515,9 @@ cal/Programs/MiKTeX 2.9/fonts/type1/urw/times/utmb8a.pfb><C:/Users/CeliaME/AppD
 ata/Local/Programs/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pfb><C:/Users/CeliaM
 E/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/urw/times/utmri8a.pfb><C:/Users
 /CeliaME/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/wasy/wasy10.pfb>
-Output written on thesis.pdf (65 pages, 2259480 bytes).
+Output written on thesis.pdf (66 pages, 2326467 bytes).
 PDF statistics:
- 1255 PDF objects out of 1440 (max. 8388607)
- 358 named destinations out of 1000 (max. 500000)
- 53405 words of extra memory for PDF output out of 61914 (max. 10000000)
+ 1282 PDF objects out of 1440 (max. 8388607)
+ 364 named destinations out of 1000 (max. 500000)
+ 53420 words of extra memory for PDF output out of 61914 (max. 10000000)
 

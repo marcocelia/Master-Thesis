@@ -6,7 +6,7 @@
 \contentsline {figure}{\numberline {1.5}{\ignorespaces Framework\relax }}{9}{figure.caption.11}
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {2.1}{\ignorespaces Modeling\relax }}{11}{figure.caption.12}
-\contentsline {figure}{\numberline {2.2}{\ignorespaces Elements of MBD\relax }}{13}{figure.caption.15}
+\contentsline {figure}{\numberline {2.2}{\ignorespaces Elements of MBD from \citep {behboodian2006model}\relax }}{13}{figure.caption.15}
 \contentsline {figure}{\numberline {2.3}{\ignorespaces Hybrid System Structure\relax }}{18}{figure.caption.22}
 \contentsline {figure}{\numberline {2.4}{\ignorespaces Hybrid System: Tick Generator\relax }}{20}{figure.caption.25}
 \contentsline {figure}{\numberline {2.5}{\ignorespaces Tick Generator Internals\relax }}{20}{figure.caption.26}
@@ -33,3 +33,4 @@
 \contentsline {figure}{\numberline {4.12}{\ignorespaces Overshoots' Time response\relax }}{50}{figure.caption.73}
 \contentsline {figure}{\numberline {4.13}{\ignorespaces Overshoots' Implementations\relax }}{51}{figure.caption.74}
 \contentsline {figure}{\numberline {4.14}{\ignorespaces Factory\relax }}{53}{figure.caption.76}
+\contentsline {figure}{\numberline {4.15}{\ignorespaces Node Hierarchy\relax }}{55}{figure.caption.78}
