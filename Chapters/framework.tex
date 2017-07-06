@@ -329,19 +329,19 @@ An exhaustive treatment of all known design patterns requires an huge effort, an
 
 \subsection{Factory}
 
-Creational patterns abstract the instantiation process. They help make a system independent of how its objects are created, composed and represented. A class creational pattern uses inheritance to vary the class that's instantiated, whereas an object creational pattern will delegate instantiation to another object. Creational patterns become important as system evolve to depend more on object composition than class inheritance. As that happens,emphasis shifts away from hard-coding a fixed set of behavior toward defining a smaller set of fundamental behavior that can be composed into any number of more complex ones. Thus creating objects with particular behavior requires more than simply instantiating a class.
-\paragraph{} The intent of the \textit{Factory Method} is defining an interface to create objects, but let  decide which class to instantiate. The UML representation of the Factory pattern is shown in Fig.\ref{fig:factory}
+Creational patterns abstract the instantiation process. They help make a system independent of how its objects are created, composed and represented. A class creational pattern uses inheritance to vary the class that's instantiated, whereas an object creational pattern will delegate instantiation to another object. Creaional patterns become important as system evolve to depend more on object composition than class inheritance. As that happens,emphasis shifts away from hard-coding a fixed set of behavior toward defining a smaller set of fundamental behavior that can be composed into any number of more complex ones. Thus creating objects with particular behavior requires more than simply instantiating a class.
+\paragraph{} The intent of the \textit{Factory Method} is defining an interface to create objects, but let subclasses decide which class to instantiate. The UML representation of the Factory pattern is shown in Fig.
 
-\begin{figure}[h]
-\centering
-\includegraphics[width=.7\textwidth]{Figs/factory2.png}
-\caption{Factory}
-\label{fig:factory}
-\end{figure}
+%\begin{figure}[h]
+%\centering
+%\includegraphics[width=.7\textwidth]{}
+%\caption{Factory}
+%\label{fig:factory}
+%\end{figure}
 
 \begin{description}
 \item[Product] defines the interface of the objects the factory method creates
-\item[Concrete Product] implements the Product's interface
+\item[Concrete Product] implements the Product’s interface
 \item[Creator]declares the factory method
 \item[Concrete Creator] overrides the factory method to return an instance of a
 ConcreteProduct
@@ -400,36 +400,14 @@ The Factory uses an associative set in order to couple Concrete Products with th
 
 \subsection{Visitor}
 
-Behavioral patterns are concerned with algorithms and the assignment of responsibility between objects. Behavioral patterns describe not just patterns of objects or classes but also the patterns of communication between them. These pattern characterize complex control flow that's difficult to follow at run-time. They shift the focus away from flow of control to let concentrate just on the way objects are interconnected. 
-\paragraph{} Behavioral pattern use inheritance to distribute behavior between classes, in particular, \textit{Visitor} pattern encapsulates behavior that would otherwise be distributed across classes. The intent of the Visitor pattern is to represent an operation to be performed on the elements of an object structure. Visitor lets define new operation without changing the class so the elements on which it operates. In abstract syntax trees, for instance, due to the heterogeneity of nodes semantic several distinct operation can be performed. A first approach could be to define an abstract class, \textit{node}, to be the base of an hierarchy of derived class each one implementing a node with a specific semantic \ref{fig:nodehierarchy}.
-\begin{figure}[h]
-\centering
-\includegraphics[width=.4\textwidth]{Figs/nodesimple.PNG}
-\caption{Node Hierarchy}
-\label{fig:nodehierarchy}
-\end{figure}
-The are tow main problems of this solution. The first is that the node interface will become too fat in a short time, since all the methods must be part of the interface to be inherited. The second is that the solution does not scale, in fact, if new operations are needed on the node class then the entire hierarchy has to be modified. The Visitor pattern provides a smarter solution which expects to decouple the node structure form its operations, by using additional classes to implement the node visit \ref{fig:visitor}. Then the node class, with the accept method, is only providing the "hook" for a generic visitor \ref{fig:nodeVisitor}
-\begin{figure}[h]
-\centering
-\begin{subfigure}{.48\textwidth}
-\includegraphics[width=\textwidth]{Figs/visitor.PNG}
-\caption{Visitor}
-\label{fig:visitor}
-\end{subfigure}
-\begin{subfigure}{.48\textwidth}
-\includegraphics[width=\textwidth]{Figs/nodeVisitor.PNG}
-\caption{Node}
-\label{fig:nodeVisitor}
-\end{subfigure}
-\end{figure}
-Visitor makes adding new operations easy. It is possible to define new operation over an object structure simply by adding new visitor. In contrast, spreading functionality over many classes requires to change all of them to define new operation. A visitor gathers related information and separates unrelated ones. Related behavior is not spread over the classes defining the object structure but rather it is localized inside a visitor. However, when using visitor adding new sublasses of node is hard, indeed each new subclass gives rise to a new abstract operation on the visitor, and then require to change all concrete visitors. As partial solution, there could be exceptional cases in which the base visitor provides default implementations that can be inherited from the derived classes. This is the case of ANTLR \citep{antlr}, a famous syntax parser that will be better discussed in \ref{sec:ctxhelp}.
+
 \section{Eclipse Editor}
 
 \subsection{Data Dictionary Importer}
 \label{sec:datadictimp}
 
 \subsection{Context Aware Syntax Helper}
-\label{sec:ctxhelp}
+
 \subsection{Abstract Syntax Tree Generation}
 
 \section{Model population}
