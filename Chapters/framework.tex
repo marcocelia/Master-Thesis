@@ -325,30 +325,30 @@ Design patterns solve many problems that object-oriented designers face every da
 \end{description}
 \noindent
 \\
-An exhaustive treatment of all known design patterns requires an huge effort, and leads to cover situation that are out of the scope of this work. Hence, herein only two of them, those really involved, will be taken into consideration. Being scalability and extensibility key factors of the proposed framework, particular care must be payed on the software architecture. The use of patterns belonging to \textit{creational} and \textit{behavioral} classes greatly helps to accomplish this objective. 
+An exhaustive treatment of all known design patterns requires an huge effort, and leads to cover situation that are out of the scope of this work. Hence, herein only two of them, those really involved, will be taken into consideration. Being scalability and extensibility key factors of the proposed framework, particular care must be payed on the software architecture. The use of patterns belonging to \textit{creational} and \textit{behavioral} classes greatly helps to accomplish this objectives. 
 
 \subsection{Factory}
 
-Creational patterns abstract the instantiation process. They help make a system independent of how its objects are created, composed and represented. A class creational pattern uses inheritance to vary the class that's instantiated, whereas an object creational pattern will delegate instantiation to another object. Creaional patterns become important as system evolve to depend more on object composition than class inheritance. As that happens,emphasis shifts away from hard-coding a fixed set of behavior toward defining a smaller set of fundamental behavior that can be composed into any number of more complex ones. Thus creating objects with particular behavior requires more than simply instantiating a class.
-\paragraph{} The intent of the \textit{Factory Method} is defining an interface to create objects, but let subclasses decide which class to instantiate. The UML representation of the Factory pattern is shown in Fig.
+Creational patterns abstract the instantiation process. They help make a system independent of how its objects are created, composed and represented. A class creational pattern uses inheritance to vary the class that's instantiated, whereas an object creational pattern will delegate instantiation to another object. Creational patterns become important as system evolve to depend more on object composition than class inheritance. As that happens,emphasis shifts away from hard-coding a fixed set of behavior toward defining a smaller set of fundamental behavior that can be composed into any number of more complex ones. Thus creating objects with particular behavior requires more than simply instantiating a class.
+\paragraph{} The intent of the \textit{Factory Method} is defining an interface to create objects, but let  decide which class to instantiate. The UML representation of the Factory pattern is shown in Fig.\ref{fig:factory}
 
-%\begin{figure}[h]
-%\centering
-%\includegraphics[width=.7\textwidth]{}
-%\caption{Factory}
-%\label{fig:factory}
-%\end{figure}
+\begin{figure}[h]
+\centering
+\includegraphics[width=.7\textwidth]{Figs/factory2.png}
+\caption{Factory}
+\label{fig:factory}
+\end{figure}
 
 \begin{description}
 \item[Product] defines the interface of the objects the factory method creates
-\item[Concrete Product] implements the Product’s interface
+\item[Concrete Product] implements the Product's interface
 \item[Creator]declares the factory method
 \item[Concrete Creator] overrides the factory method to return an instance of a
 ConcreteProduct
 \end{description}
 \noindent
 \\
-Sometimes class Factories are implemented as \textit{Singleton}, which is another design pattern ensuring that in the system there is only one instance of the class. The client class request for the creation of new a new concrete product to the Factory and uses object through their interface. Typically the client provide to the Factory a products identifier, this is then used, for instance, inside a switch/case to determine the correct concrete product. However, managing all possible Concrete Products by hard-coding the logic to create them is not flexible. For this reason, more sophisticated techniques are usually adopted, they make use of the so called \textit{registry} and let Concrete Products register themselves into the factory. Follows an example of the Factory pattern, it make use of \textit{Reflections}, which is a Java mechanisms to discover information about the fields, methods and constructors of loaded classes, and to use reflected fields, methods, and constructors to operate on their underlying counterparts.
+Sometimes class Factories are implemented as \textit{Singleton}, which is another design pattern ensuring that in the system there is only one instance of the class. The client class request for the creation of new a new concrete product to the Factory and uses object through their interface. Typically the client provide to the Factory a products identifier that is used, for instance, inside a switch/case to determine the correct concrete product to be instantiated. However, managing all possible Concrete Products by hard-coding the logic to create them is not flexible. For this reason, more sophisticated techniques are usually adopted, they make use of the so called \textit{registry} and let Concrete Products register themselves into the factory. Follows a Java implementation example of the Factory pattern, it make use of \textit{Reflections}, which is mechanisms to discover information about the fields, methods and constructors of loaded classes. Further, it allows to use reflected fields, methods, and constructors to operate on their underlying counterparts.
 
 \begin{lstlisting}[language=Java]
 interface Product {
@@ -359,12 +359,14 @@ class ProductOne implements Product {
 		ProductFactory.instance().register("One", ProductOne.class);
 	}
 	public String getName() { return "instance of ProductOne"; }
+    ...		
 }
 class ProductTwo implements Product {
 	static {
 		ProductFactory.instance().register("Two", ProductTwo.class);
 	}
 	public String getName() { return "instance of ProductTwo"; }
+    ...	
 }
 
 class ProductFactory {
@@ -386,7 +388,6 @@ class ProductFactory {
 			Constructor pConstructor = pClass.getDeclaredConstructor(null);
 			return (Product)pConstructor.newInstance(null);
 		}
-        ...
 }
 ...
 public static void main(String[] args)
@@ -398,16 +399,94 @@ public static void main(String[] args)
 \end{lstlisting}
 The Factory uses an associative set in order to couple Concrete Products with their identifier. Each Concrete Product register itself through the initial static block, however, in order to be sure of having all the registration done before start creating Concrete Product, the loader method "\textit{Class.forName(ClassName)}" has to be called.
 
-\subsection{Visitor}
+	\subsection{Visitor}
 
+Behavioral patterns are concerned with algorithms and the assignment of responsibility between objects. Behavioral patterns describe not just patterns of objects or classes but also the patterns of communication between them. These pattern characterize complex control flow that's difficult to follow at run-time. They shift the focus away from flow of control to let concentrate just on the way objects are interconnected. 
+\paragraph{} \textit{Visitor} pattern uses inheritance to encapsulates behavior that would otherwise be distributed across classes. The intent of the Visitor pattern is to represent an operation to be performed on the elements of an object structure. Visitor lets define new operation without changing the class so the elements on which it operates. In abstract syntax trees, for instance, due to the heterogeneity of nodes' semantic, several distinct operation can be performed. A first approach could be to define an abstract class, \textit{node}, to be the base of an hierarchy of derived class each one implementing a node with a specific semantic \ref{fig:nodehierarchy}.
+\begin{figure}[!h]
+\centering
+\includegraphics[width=.35\textwidth]{Figs/nodesimple.PNG}
+\caption{Node Hierarchy}
+\label{fig:nodehierarchy}
+\end{figure}
+\noindent
+\\
+The are tow main problems of this solution. The first is that the node interface will become too fat in a short time, since all the methods must be part of the interface to be inherited. The second is that the solution does not scale, in fact, if new operations are needed on the node class then the entire hierarchy has to be modified. The Visitor pattern provides a smarter solution which expects to decouple the node structure form its operations, by using additional classes to implement the node visit \ref{fig:visitor}. Then the node class, through the \textit{accept} method, is only providing the "hook" for a generic visitor. \ref{fig:nodeVisitor}
 
-\section{Eclipse Editor}
+\begin{figure}[h]
+\centering
+\begin{subfigure}{.48\textwidth}
+\includegraphics[width=\textwidth]{Figs/visitor.PNG}
+\caption{Visitor}
+\label{fig:visitor}
+\end{subfigure}
+\begin{subfigure}{.48\textwidth}
+\includegraphics[width=\textwidth]{Figs/nodeVisitor.PNG}
+\caption{Node}
+\label{fig:nodeVisitor}
+\end{subfigure}
+\end{figure}
+
+Visitor makes adding new operations easy. It is possible to define new operation over an object structure simply by adding new visitor in contrast to spreading functionality over many classes, which requires to change all of them to define new operation. A visitor gathers related information and separates unrelated ones. Related behavior is not spread over the classes defining the object structure but rather it is localized inside a visitor. However, when using visitor adding new sublasses of node is hard, indeed each new subclass gives rise to a new abstract operation on the visitor, and then require to change all concrete visitors. As partial solution, there could be exceptional cases in which the base visitor provides default implementations that can be inherited from the derived classes. This is the case of ANTLR \citep{antlr}, a popular syntax parser that will be better discussed in \ref{sec:ast}.
+
+\section{Requirements Editor}
+
+The core application of the presented framework is the \textit{Requirements Editor}. It has been implemented as an \textit{Eclipse Editor Plugin}, which provides a set of built-in editing features such as syntax coloring and suggestions engine. The editor is the tool to which the user is directly exposed. It has to provide a user friendly interface and, in the mean time, ensure the construction of well defined requirements. One of the main practical rules for removing entities ambiguities in specifications documents is to use, since the beginning, a Data-Dictionary. It shall contain all the entities referred inside the document, each of them appearing as a record containing several explanatory fields. The editor provides support for importing different types of Data-Dictionary (Sec.\ref{sec:datadictimp}).
+\par In order to support user in writing syntax coherent requirements the editor provides an helpful engine to \textit{suggest} and \textit{autocomplete} sentences (Sec.\ref{sec:ctxhelper}). They can be also used, especially in the firsts usage attempts, as a mean allowing user to learn the syntax. Such functionality, which are common of many evolved programming editors, are cheap in therms of implementation for formal syntax, but, the more the syntax becomes informal, the more they become expensive. In any case, being extremely difficult comply with all possible inputs combinations, they are usually meant as best-effort tools. 
+\par Most likely the main capability of the editor is to allow user to export monitors that can run in several modeling platforms. This is a key feature since allow to save implementation time and  eliminate the presence of interpretation and coding errors. To enforce extensibility the complete process is performed in two steps (Sec.\ref{sec:ast} and \ref{sec:tagetgen}) which are hidden to the user.
 
 \subsection{Data Dictionary Importer}
 \label{sec:datadictimp}
 
+Since the Data-Dictionary could be a file of any extension the importer must, ideally, provide support all of them. The software structure of the importer has, hence, to be flexible in order to add, when needed, new file format. This is a typical problem that can be solved with a Factory pattern. Each file format needs its own importer, but the tool, which has to treat all of them in the same way, it is the only module knowing which importer to instantiate for a specific file. The software structure of the signal readers is shown in Fig.\ref{fig:ddimpuml}.
+
+\begin{figure}[!h]
+\centering
+\includegraphics[width=.9\textwidth]{Figs/ddimpUML.PNG}
+\caption{Signal Readers UML}
+\label{fig:ddimpuml}
+\end{figure}
+In its first version the importer provides support just for \textit{CSV} and \textit{XML} files, being them common formats for data file. The \textit{SigFileReaderFactory} has an associative set, \textit{registry}, which uses as keys the file extension, for instance the key of \textit{CSVFileReader} is ".csv". Using this software structure add more importer is a quite easy task since it is only needed to define a new class, e.g. \textit{JSONReader}, deriving from \textit{SigFileReader} and let it call the \textit{SigFileReaderFactory} method \textit{register}. The correct file reader to be instantiated is then determined from the extension of the file provided by the user through the window in Fig.\ref{fig:ddwin}.
+
+\begin{figure}[!h]
+\centering
+\includegraphics[width=.5\textwidth]{Figs/ddwin.PNG}
+\caption{Importer Dialog}
+\label{fig:ddwin}
+\end{figure}
+Through the above dialog is possible to import only files that can be evaluated as Data Dictionaries. Such consistence check is performed through the function \textit{isFormatValid} present in the SigFileReader interface. In particular, such function should provide a positive feedback whether the content of the file is formatted coherently to its extension and if all of the required fields are present for all the entries of the Data Dictionary. In Fig.\ref{fig:ddcsv} is shown an example of well-formed Data Dictionary.
+
+\begin{figure}[!h]
+\centering
+\includegraphics[width=.9\textwidth]{Figs/ddcsv.PNG}
+\caption{CSV Data Dictionary}
+\label{fig:ddcsv}
+\end{figure}
+It requires the specification of the type of the entry, its id, two explanatory fields, description and measurement unit, and tree optional numerical values, bounds and nominal value. The same Data Dictionary in XML format is shown in Fig.\ref{fig:ddxml}. 
+
+\begin{figure}[!h]
+\centering
+\includegraphics[width=\textwidth]{Figs/ddxml.PNG}
+\caption{XML Data Dictionary}
+\label{fig:ddxml}
+\end{figure}
+
 \subsection{Context Aware Syntax Helper}
+\label{sec:ctxhelper}
+
+The Context Aware Syntax Helper provide functionality of word and sentences completion. Typically, whenever the user every time is typing something and does not remember the exact syntax of what follow, he press a keyword shortcut to invoke the helping engine. The prefix Context Aware is used to clarify that its suggestions varies not only according to the set of keywords preceding the invocation point, but also according the location, in therms of syntax section, on which such point lies. 
+\par The context awareness requires to perform kind of hierarchical inspection of the textual "neighborhood" surrounding the invocation point. Then the list of proposals is different according to the syntax section. In other words, it is possible to consider just one syntax for each section and compute a section-wise completion. The syntax defined in \ref{ssec:editorsyn}, can then be partitioned in \textit{Requirement block}, which, in turn, encloses \textit{HEADER}, \textit{ASSUMPTION} and \textit{ASSERTION} (Fig.\ref{fig:reqsec}).
+
+\begin{figure}[!h]
+\centering
+\includegraphics[width=.4\textwidth]{Figs/resec.PNG}
+\caption{Syntax Sections}
+\label{fig:reqsec}
+\end{figure}
+Every time the context helper is invoked it determines the current section and provide proposal accordingly. In general, a syntax helper has to behave differently whether it has to provide the completion for an incomplete word or if it has to suggest a continuation after a completed word. For both cases the literature provides an efficient data structure called \textit{Trie} \citep{black2010trie}.
 
 \subsection{Abstract Syntax Tree Generation}
+\label{sec:ast}
 
-\section{Model population}
+\subsection{Target Platform Generation}
+\label{sec:tagetgen}
