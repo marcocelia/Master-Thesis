@@ -399,7 +399,8 @@ public static void main(String[] args)
 \end{lstlisting}
 The Factory uses an associative set in order to couple Concrete Products with their identifier. Each Concrete Product register itself through the initial static block, however, in order to be sure of having all the registration done before start creating Concrete Product, the loader method "\textit{Class.forName(ClassName)}" has to be called.
 
-	\subsection{Visitor}
+\subsection{Visitor}
+\label{ssec:visitor}
 
 Behavioral patterns are concerned with algorithms and the assignment of responsibility between objects. Behavioral patterns describe not just patterns of objects or classes but also the patterns of communication between them. These pattern characterize complex control flow that's difficult to follow at run-time. They shift the focus away from flow of control to let concentrate just on the way objects are interconnected. 
 \paragraph{} \textit{Visitor} pattern uses inheritance to encapsulates behavior that would otherwise be distributed across classes. The intent of the Visitor pattern is to represent an operation to be performed on the elements of an object structure. Visitor lets define new operation without changing the class so the elements on which it operates. In abstract syntax trees, for instance, due to the heterogeneity of nodes' semantic, several distinct operation can be performed. A first approach could be to define an abstract class, \textit{node}, to be the base of an hierarchy of derived class each one implementing a node with a specific semantic \ref{fig:nodehierarchy}.
@@ -474,7 +475,7 @@ It requires the specification of the type of the entry, its id, two explanatory 
 \subsection{Context Aware Syntax Helper}
 \label{sec:ctxhelper}
 
-The Context Aware Syntax Helper provide functionality of word and sentences completion. Typically, whenever the user every time is typing something and does not remember the exact syntax of what follow, he press a keyword shortcut to invoke the helping engine. The prefix Context Aware is used to clarify that its suggestions varies not only according to the set of keywords preceding the invocation point, but also according the location, in therms of syntax section, on which such point lies. 
+The Context Aware Syntax Helper provide functionality of word and sentences completion, most commercial editors offer their own such as \citep{IntelliSense}. Typically, whenever the user is typing something and does not remember the exact syntax of what follow, he press a keyword shortcut to invoke the helping engine. The prefix Context Aware is used to clarify that its suggestions varies not only according to the set of keywords preceding the invocation point, but also according the location, in therms of syntax section, on which such point lies. 
 \par The context awareness requires to perform kind of hierarchical inspection of the textual "neighborhood" surrounding the invocation point. Then the list of proposals is different according to the syntax section. In other words, it is possible to consider just one syntax for each section and compute a section-wise completion. The syntax defined in \ref{ssec:editorsyn}, can then be partitioned in \textit{Requirement block}, which, in turn, encloses \textit{HEADER}, \textit{ASSUMPTION} and \textit{ASSERTION} (Fig.\ref{fig:reqsec}).
 
 \begin{figure}[!h]
@@ -483,10 +484,89 @@ The Context Aware Syntax Helper provide functionality of word and sentences comp
 \caption{Syntax Sections}
 \label{fig:reqsec}
 \end{figure}
-Every time the context helper is invoked it determines the current section and provide proposal accordingly. In general, a syntax helper has to behave differently whether it has to provide the completion for an incomplete word or if it has to suggest a continuation after a completed word. For both cases the literature provides an efficient data structure called \textit{Trie} \citep{black2010trie}.
+Every time the context helper is invoked it determines the current section and provide proposal accordingly. In general, a syntax helper has to behave differently whether it has to provide the completion for an incomplete word or if it has to suggest a continuation after a completed word. For both cases the literature provides an efficient data structure called \textit{Trie} \citep{black2010trie}. A word-Trie is an ordered tree that stores words one character per layer. In Fig.\ref{fig:wtrie} is shown a word-Trie storing the words \textit{"able","ably","aces","aced","babe","bad","back"}.
+\begin{figure}[!ht]
+\centering
+\includegraphics[width=.6\textwidth]{Figs/wtrie.png}
+\caption{Word-Trie}
+\label{fig:wtrie}
+\end{figure}
+
+Typical operations to be performed on Tries are new word insertion and list all possible matching for a partial word. Hence the syntax helper, every time is invoked on an incomplete word, queries a word-Trie to get all possible matching. 
+\par A possible generalization of a word-Trie is the sentence-Trie. Instead of storing words per character it stores sentences per words. The insertions policy is quite similar to the one of its simpler version, while the retrieving policy may vary whether one wants to propose just the set of possible following words or possible completion sentences. In the first, case the procedure must return all child nodes of the sentence passed as parameter, while for the second the procedure is the same to the word-Trie and requires to follow all the child path downto the leaves.
+
+\paragraph{} As an example of syntax completion, assume that the user wants to type the following, contract-based, requirement
+\begin{center}
+\begin{tabular}{ll}
+&R.3 Overshoot \\
+&\textbf{Assumption:}\\
+&system inertia (sysinertia) less than 5 kgm2 \textbf{and} \\
+&reference input (cmdup) is a step with amplitude 10\\
+&\textbf{Assertion:}\\
+&the motor speed (motorspeed) overshoot shall be lass than or equal to 1\\
+\end{tabular}
+\end{center}
+Starting from an empty requirement he types "\textit{system inertia is}" and the invokes the helper, the results returned by the sentence-Trie is all the possible continuing sentences allowed by the syntax of this section.
+\begin{figure}[h]
+\centering
+\includegraphics[width=.75\textwidth]{Figs/assumcompl.png}
+\caption{Assumption completion}
+\label{fig:assumcompl}
+\end{figure}
+\noindent
+\\
+In the same manner user can type the assumption on the signal generator and then switch to the assertion section.
+In this case, after he inputs the name of the signal, the context helper queries the assertion syntax to provides a different list of completions.
+\begin{figure}[h]
+\centering
+\includegraphics[width=.8\textwidth]{Figs/assercompl.png}
+\caption{Assertion completion}
+\label{fig:assercompl}
+\end{figure}
+
+In the same way user can type even more complex requirements document \ref{fig:reqdoc}, relying on the fact that the syntax he uses is consistent and unambiguous.
+\begin{figure}[h]
+\centering
+\includegraphics[width=.75\textwidth]{Figs/recdoc.png}
+\caption{Requirements Document}
+\label{fig:reqdoc}
+\end{figure}
+
 
 \subsection{Abstract Syntax Tree Generation}
 \label{sec:ast}
 
+The process of Abstract Syntax Tree Generation is part of the whole generation process. The reason why an intermediate representation is provided is ease the task of platform generators, which does not have to perform textual translations. Indeed, the Abstract Syntax Tree has a well defined structure that can be iteratively analyzed and parsed.
+\paragraph{} The intermediate representation is achieved involving ANTLR \citep{antlr}. It allow users to define their own parsable syntax into a  grammar ".g4" file, then it produces a set of classes which are able to recognize the syntax and return a syntax tree. The process is shown in Fig.\ref{fig:antlrp}
+
+\begin{figure}[!h]
+\centering
+\includegraphics[width=.7\textwidth]{Figs/antlrprocess.jpg}
+\caption{ANTLR generation process}
+\label{fig:antlrp}
+\end{figure}
+
+The generated classes handles the visit of the syntax tree through the Visitor Pattern (Sec.\ref{ssec:visitor}). As a example syntax tree derived from a simple grammar is shown in Fig.\ref{fig:antlrtree}.
+
+\begin{figure}[!h]
+\centering
+\includegraphics[width=.7\textwidth]{Figs/antlrtree.PNG}
+\caption{Basic syntax Example}
+\label{fig:antlrtree}
+\end{figure}
+
+In particular, if the grammar file is "myGrammar.g4" the two main generated classes are "myGrammarVisitor.java" and "myGrammarBaseVisitor.java". The first is the visitor interface, while the other provides a default implementation of all the node visit. Hence, in order to build its own visit the user needs to derive the \textit{myGrammarBaseVisitor} class and override the methods performing the visit on the nodes under interest. 
+Input and result of the intermediate transformation are shown in Fig.\ref{fig:reqdoc} and Fig.\ref{fig:intermrepr} respectively. Basically the requirement block keeps it structure, but the requirements are expressed in the format
+\begin{center}
+$PATTERN\_ID(param_1,\dots,param_n)$
+\end{center}
+this constitutes also the input of the platform generator parser, which is in charge of the translation of patterns into monitors.
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=.6\textwidth]{Figs/intermrep.PNG}
+\caption{Intermediate Representation}
+\label{fig:intermrepr}
+\end{figure}
 \subsection{Target Platform Generation}
 \label{sec:tagetgen}
