@@ -412,7 +412,7 @@ Behavioral patterns are concerned with algorithms and the assignment of responsi
 \end{figure}
 \noindent
 \\
-The are tow main problems of this solution. The first is that the node interface will become too fat in a short time, since all the methods must be part of the interface to be inherited. The second is that the solution does not scale, in fact, if new operations are needed on the node class then the entire hierarchy has to be modified. The Visitor pattern provides a smarter solution which expects to decouple the node structure form its operations, by using additional classes to implement the node visit \ref{fig:visitor}. Then the node class, through the \textit{accept} method, is only providing the "hook" for a generic visitor. \ref{fig:nodeVisitor}
+The are two main problems of this solution. The first is that the node interface will become too fat in a short time, since all the methods must be part of the interface to be inherited. The second is that the solution does not scale, in fact, if new operations are needed on the node class then the entire hierarchy has to be modified. The Visitor pattern provides a smarter solution which expects to decouple the node structure form its operations, by using additional classes to implement the node visit \ref{fig:visitor}. Then the node class, through the \textit{accept} method, is only providing the "hook" for a generic visitor. \ref{fig:nodeVisitor}
 
 \begin{figure}[h]
 \centering
@@ -432,14 +432,14 @@ Visitor makes adding new operations easy. It is possible to define new operation
 
 \section{Requirements Editor}
 
-The core application of the presented framework is the \textit{Requirements Editor}. It has been implemented as an \textit{Eclipse Editor Plugin}, which provides a set of built-in editing features such as syntax coloring and suggestions engine. The editor is the tool to which the user is directly exposed. It has to provide a user friendly interface and, in the mean time, ensure the construction of well defined requirements. One of the main practical rules for removing entities ambiguities in specifications documents is to use, since the beginning, a Data-Dictionary. It shall contain all the entities referred inside the document, each of them appearing as a record containing several explanatory fields. The editor provides support for importing different types of Data-Dictionary (Sec.\ref{sec:datadictimp}).
+The core application of the presented framework is the \textit{Requirements Editor}. It has been implemented as an \textit{Eclipse Editor Plugin}, which provides a set of built-in editing features such as syntax coloring and suggestions engine. The editor is the tool to which the user is directly exposed. It has to provide a user friendly interface and, in the mean time, ensure the construction of well defined requirements. One of the main practical rules for removing entities ambiguities in specifications documents is to use, since the beginning, a Data-Dictionary. It shall contain all the entities referred inside the document, each of them appearing as a record having several explanatory fields. The editor provides support for importing different types of Data-Dictionary (Sec.\ref{sec:datadictimp}).
 \par In order to support user in writing syntax coherent requirements the editor provides an helpful engine to \textit{suggest} and \textit{autocomplete} sentences (Sec.\ref{sec:ctxhelper}). They can be also used, especially in the firsts usage attempts, as a mean allowing user to learn the syntax. Such functionality, which are common of many evolved programming editors, are cheap in therms of implementation for formal syntax, but, the more the syntax becomes informal, the more they become expensive. In any case, being extremely difficult comply with all possible inputs combinations, they are usually meant as best-effort tools. 
 \par Most likely the main capability of the editor is to allow user to export monitors that can run in several modeling platforms. This is a key feature since allow to save implementation time and  eliminate the presence of interpretation and coding errors. To enforce extensibility the complete process is performed in two steps (Sec.\ref{sec:ast} and \ref{sec:tagetgen}) which are hidden to the user.
 
 \subsection{Data Dictionary Importer}
 \label{sec:datadictimp}
 
-Since the Data-Dictionary could be a file of any extension the importer must, ideally, provide support all of them. The software structure of the importer has, hence, to be flexible in order to add, when needed, new file format. This is a typical problem that can be solved with a Factory pattern. Each file format needs its own importer, but the tool, which has to treat all of them in the same way, it is the only module knowing which importer to instantiate for a specific file. The software structure of the signal readers is shown in Fig.\ref{fig:ddimpuml}.
+Since the Data-Dictionary could be a file of any extension, the importer shall provide support all of them. Hence, the software structure of the importer has to be flexible in order to add, when needed, new file formats. This is a typical problem that software designers solves using the Factory pattern. Each file format needs its own importer, on its own the tool, which has to treat all of them in the same way, it is the only module knowing which importer to instantiate for a specific file. A possible class diagram of the signal readers' software structure is shown in Fig.\ref{fig:ddimpuml}.
 
 \begin{figure}[!h]
 \centering
@@ -447,7 +447,7 @@ Since the Data-Dictionary could be a file of any extension the importer must, id
 \caption{Signal Readers UML}
 \label{fig:ddimpuml}
 \end{figure}
-In its first version the importer provides support just for \textit{CSV} and \textit{XML} files, being them common formats for data file. The \textit{SigFileReaderFactory} has an associative set, \textit{registry}, which uses as keys the file extension, for instance the key of \textit{CSVFileReader} is ".csv". Using this software structure add more importer is a quite easy task since it is only needed to define a new class, e.g. \textit{JSONReader}, deriving from \textit{SigFileReader} and let it call the \textit{SigFileReaderFactory} method \textit{register}. The correct file reader to be instantiated is then determined from the extension of the file provided by the user through the window in Fig.\ref{fig:ddwin}.
+In its first version the importer provides support just for \textit{CSV} and \textit{XML} files, being them common formats for data file. The \textit{SigFileReaderFactory} keeps the supported importers within an associative set, \textit{registry}, which uses as keys the file extension; for instance the key of \textit{CSVFileReader} is ".csv". Using this software structure adding further importers is a quite easy task, in fact it only requires to define the new importer class, e.g. \textit{JSONReader}, deriving from \textit{SigFileReader} and let it call the \textit{SigFileReaderFactory} method \textit{register}. The correct file reader to be instantiated is then determined from the extension of the file provided by the user through the window in Fig.\ref{fig:ddwin}.
 
 \begin{figure}[!h]
 \centering
@@ -455,7 +455,7 @@ In its first version the importer provides support just for \textit{CSV} and \te
 \caption{Importer Dialog}
 \label{fig:ddwin}
 \end{figure}
-Through the above dialog is possible to import only files that can be evaluated as Data Dictionaries. Such consistence check is performed through the function \textit{isFormatValid} present in the SigFileReader interface. In particular, such function should provide a positive feedback whether the content of the file is formatted coherently to its extension and if all of the required fields are present for all the entries of the Data Dictionary. In Fig.\ref{fig:ddcsv} is shown an example of well-formed Data Dictionary.
+Through the above dialog is possible to import only files that can be evaluated as Data Dictionaries. Such consistence check is performed through the function \textit{isFormatValid} present in the SigFileReader interface. In particular, such function should provide a positive feedback whether the content of the file is formatted coherently to its extension, and if all of the required fields are present for all the entries of the Data Dictionary. In Fig.\ref{fig:ddcsv} is shown an example of well-formed Data Dictionary.
 
 \begin{figure}[!h]
 \centering
@@ -463,7 +463,9 @@ Through the above dialog is possible to import only files that can be evaluated 
 \caption{CSV Data Dictionary}
 \label{fig:ddcsv}
 \end{figure}
-It requires the specification of the type of the entry, its id, two explanatory fields, description and measurement unit, and tree optional numerical values, bounds and nominal value. The same Data Dictionary in XML format is shown in Fig.\ref{fig:ddxml}. 
+\noindent
+\\
+It requires the specification of the entry type, its id, two explanatory fields, description and measurement unit, and tree optional numerical values, bounds and nominal value. The same Data Dictionary in XML format is shown in Fig.\ref{fig:ddxml}. 
 
 \begin{figure}[!h]
 \centering
@@ -507,24 +509,26 @@ Typical operations to be performed on Tries are new word insertion and list all 
 \end{tabular}
 \end{center}
 Starting from an empty requirement he types "\textit{system inertia is}" and the invokes the helper, the results returned by the sentence-Trie is all the possible continuing sentences allowed by the syntax of this section.
-\begin{figure}[h]
+\begin{figure}[!h]
 \centering
-\includegraphics[width=.75\textwidth]{Figs/assumcompl.png}
+\includegraphics[width=.6\textwidth]{Figs/assumcompl.png}
 \caption{Assumption completion}
 \label{fig:assumcompl}
 \end{figure}
 \noindent
 \\
-In the same manner user can type the assumption on the signal generator and then switch to the assertion section.
-In this case, after he inputs the name of the signal, the context helper queries the assertion syntax to provides a different list of completions.
+In the same manner user can add any number of assumptions, such as the specification of signal generator. The context helper suggest the keyword \textit{"AND"} every time a valid statement has been entered. 
+
+Once all the assumption has been defined, user can switch to the assertion section. In this case, after he inputs the name of the signal, the context helper queries a different sentence-Trie, the one holding the assertions syntax, to provides a different list of completions.
 \begin{figure}[h]
 \centering
-\includegraphics[width=.8\textwidth]{Figs/assercompl.png}
+\includegraphics[width=.65\textwidth]{Figs/assercompl.png}
 \caption{Assertion completion}
 \label{fig:assercompl}
 \end{figure}
-
-In the same way user can type even more complex requirements document \ref{fig:reqdoc}, relying on the fact that the syntax he uses is consistent and unambiguous.
+\noindent
+\\
+By repeating the above procedure user can type more complex requirements document \ref{fig:reqdoc}, relying on the fact that the syntax he uses is consistent and unambiguous.
 \begin{figure}[h]
 \centering
 \includegraphics[width=.75\textwidth]{Figs/recdoc.png}
@@ -536,31 +540,31 @@ In the same way user can type even more complex requirements document \ref{fig:r
 \subsection{Abstract Syntax Tree Generation}
 \label{sec:ast}
 
-The process of Abstract Syntax Tree Generation is part of the whole generation process. The reason why an intermediate representation is provided is ease the task of platform generators, which does not have to perform textual translations. Indeed, the Abstract Syntax Tree has a well defined structure that can be iteratively analyzed and parsed.
-\paragraph{} The intermediate representation is achieved involving ANTLR \citep{antlr}. It allow users to define their own parsable syntax into a  grammar ".g4" file, then it produces a set of classes which are able to recognize the syntax and return a syntax tree. The process is shown in Fig.\ref{fig:antlrp}
+The process of Abstract Syntax Tree Generation is part of the whole generation process. The reason why an intermediate representation is provided is ease the task of platform generators, which does not have to perform any kind of textual analysis. Indeed, an Abstract Syntax Tree has a well defined structure that can be iteratively analyzed and parsed.
+\paragraph{} The intermediate representation is achieved involving the grammar parser and lexer ANTLR \citep{antlr}. It allows users to define their own parsable syntax into a  grammar ".g4" file, then it produces a set of classes which are able to recognize the syntax and return the correspondent syntax tree. The process it follows is shown in Fig.\ref{fig:antlrp}
 
 \begin{figure}[!h]
 \centering
-\includegraphics[width=.7\textwidth]{Figs/antlrprocess.jpg}
+\includegraphics[width=.7\textwidth]{Figs/antlrprocess.PNG}
 \caption{ANTLR generation process}
 \label{fig:antlrp}
 \end{figure}
-
-The generated classes handles the visit of the syntax tree through the Visitor Pattern (Sec.\ref{ssec:visitor}). As a example syntax tree derived from a simple grammar is shown in Fig.\ref{fig:antlrtree}.
-
+\noindent
+\\
+As example, the syntax tree derived from a simple grammar is shown in Fig.\ref{fig:antlrtree}.
 \begin{figure}[!h]
 \centering
-\includegraphics[width=.7\textwidth]{Figs/antlrtree.PNG}
+\includegraphics[width=.65\textwidth]{Figs/antlrtree.PNG}
 \caption{Basic syntax Example}
 \label{fig:antlrtree}
 \end{figure}
 
-In particular, if the grammar file is "myGrammar.g4" the two main generated classes are "myGrammarVisitor.java" and "myGrammarBaseVisitor.java". The first is the visitor interface, while the other provides a default implementation of all the node visit. Hence, in order to build its own visit the user needs to derive the \textit{myGrammarBaseVisitor} class and override the methods performing the visit on the nodes under interest. 
-Input and result of the intermediate transformation are shown in Fig.\ref{fig:reqdoc} and Fig.\ref{fig:intermrepr} respectively. Basically the requirement block keeps it structure, but the requirements are expressed in the format
+The generated classes handles the visit of the syntax tree through the Visitor Pattern (Sec.\ref{ssec:visitor}). In particular, if the grammar file is "myGrammar.g4" the two main generated classes are "myGrammarVisitor.java" and "myGrammarBaseVisitor.java". The first corresponds to the visitor interface, while the seconds provides a default implementation of all the nodes' visits. Hence, in order to build its own traversing policy, the user needs to derive the \textit{myGrammarBaseVisitor} class and override the methods performing the visit on the nodes under interest. Alternatively he can define its visitor as a new class which only implements the interface and does not derive from the base visitor, in this case, however, all node visit must be implemented in order to let the new class instantiable.
+Input and result of the intermediate transformation are shown in Fig.\ref{fig:reqdoc} and Fig.\ref{fig:intermrepr} respectively. Basically the requirement block keeps it structure, but the requirements are expressed in the following format.
 \begin{center}
 $PATTERN\_ID(param_1,\dots,param_n)$
 \end{center}
-this constitutes also the input of the platform generator parser, which is in charge of the translation of patterns into monitors.
+This constitutes also the input of the platform generator parser, which is in charge of the translation of patterns into monitors. Note that this structure of the requirements, except for the name, does not provide any information about the pattern, therefore its correct implementation strongly relies on sharing the same pattern semantic between intermediate and platform generators.
 
 \begin{figure}[h]
 \centering
@@ -568,5 +572,38 @@ this constitutes also the input of the platform generator parser, which is in ch
 \caption{Intermediate Representation}
 \label{fig:intermrepr}
 \end{figure}
+
 \subsection{Target Platform Generation}
 \label{sec:tagetgen}
+
+The target platform is the modeling environment which will hosts the generated monitors. It also has to provide the support for simulation. The platform generator is the module that receives as input a syntax tree and converts its nodes into model's units. Since the generation process is strictly dependent on the modeling environment, it is possible, in the same manner has been done for data-dictionary importers, to associate a specific software module with a specific environment. However, the absence in the syntax tree of environment's features requires to create and treat all generators' classes in the same way. Again this problem is greatly solved by using the Factory design pattern. A possible classes diagrams for a generators hierarchy is shown in Fig.\ref{fig:genuml}
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=.8\textwidth]{Figs/generatorUML.png}
+\caption{Platform Generators UML}
+\label{fig:genuml}
+\end{figure}
+\noindent
+\\
+A platform generator takes as input a list of requirement and produces a file containing the implementation of the monitors, such a file in the case of Simulink is a Matlab script that, once executed, populates the associated model. 
+\par Starting from the requirements document of Fig.\ref{fig:reqdoc}, the user can \textit{build} it through the below window.
+
+\begin{figure}[!h]
+\centering
+\includegraphics[width=.4\textwidth]{Figs/buildwin.PNG}
+\caption{Build Window}
+\label{fig:buildwin}
+\end{figure}
+
+The \textit{Target Model} field is needed by the generation procedure in order to let the monitor suitable to be attached to the existing model. The other fields are needed in order to, respectively, locate and name the generated script. The result of the model population is shown in Fig.\ref{fig:finalmodel}.
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=\textwidth]{Figs/finalmodel.png}
+\caption{Population Result}
+\label{fig:finalmodel}
+\end{figure}
+
+The monitor subsystem has as many subsystems as requirements. Each one gets as inputs all the model entities referred inside the requirement and returns an output connected to an assertion block which terminates the simulation if case of false input.
+
