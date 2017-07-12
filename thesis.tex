@@ -1,10 +1,10 @@
 % ******************************* PhD Thesis Template **************************
 \documentclass[a4paper,12pt,times,numbered,print,index,oneside]{Classes/PhDThesisPSnPDF}
-
+% UTRC footer 
+%\cfoot{this document contains technical data subject to EU NLR}%
 % ******************************************************************************
 % ******************************* Class Options ********************************
 % ******************************************************************************
-
 % `a4paper' or `a5paper': A4 or A5 Paper size
 %
 % `11pt' or `12pt'(default): Font Size 10pt is NOT recommended by the University
@@ -69,9 +69,9 @@
 %
 % `PageStyleII': Chapter Name on Even Side (Left Even) in Header. Section Number
 % and Section Name in Header on Odd Side (Right Odd). Page numbering in footer
-
-
+%
 % ********************************** Preamble **********************************
+
 % Preamble: Contains packages and user-defined commands and settings
 \input{Preamble/preamble}
 
@@ -84,10 +84,10 @@
 % author name for submission to the Student Registry, use the `abstract' option in
 % the document class.
 
-\ifdefineAbstract
- \pagestyle{empty}
- \includeonly{Abstract/abstract}
-\fi
+%\ifdefineAbstract
+ %\pagestyle{empty}
+ %\includeonly{Abstract/abstract}
+%\fi
 
 % ***************************** Chapter Mode ***********************************
 % The chapter mode allows user to only print particular chapters with references
@@ -100,7 +100,9 @@
 %\fi
 
 % ******************************** Front Matter ********************************
+
 \begin{document}
+
 
 \frontmatter
 
@@ -122,7 +124,6 @@
 
 % ******************************** Main Matter *********************************
 \mainmatter
-%\include{Nomenclature/nomenclature}
 \input{Chapters/introduction}
 \input{Chapters/mbd_and_hs}
 \input{Chapters/formal_lang}

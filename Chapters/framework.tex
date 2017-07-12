@@ -319,7 +319,7 @@ In object-oriented software design a pattern describes a problem which occurs ov
 \\
 Design patterns solve many problems that object-oriented designers face every day, like
 \begin{description}
-\item[Finding appropriate abjects] The hard part about object-oriented design is decomposing a system into objects. Design patterns help identifying abstractions and the objects that can capture them.
+\item[Finding appropriate objects] The hard part about object-oriented design is decomposing a system into objects. Design patterns help identifying abstractions and the objects that can capture them.
 \item[Determining object granularity] Objects can vary tremendously in size and number.Design patterns address this issue as well. Many of them describe specific techniques of decomposing an object into smaller objects.
 \item[Specifying object interfaces] Interfaces are fundamental in object-oriented software systems. There is no way to know anything about an object without going through its interface. Design patterns help defining interfaces by identifying their key elements and the kinds of data that get sent across an interface.
 \end{description}
@@ -502,10 +502,10 @@ Typical operations to be performed on Tries are new word insertion and list all 
 \begin{tabular}{ll}
 &R.3 Overshoot \\
 &\textbf{Assumption:}\\
-&system inertia (sysinertia) less than 5 kgm2 \textbf{and} \\
-&reference input (cmdup) is a step with amplitude 10\\
+&system inertia (sysinertia) less than IN kgm2 \textbf{and} \\
+&reference input (cmdup) is a step with amplitude UAMPL beginning in UBEG \\
 &\textbf{Assertion:}\\
-&the motor speed (motorspeed) overshoot shall be lass than or equal to 1\\
+&the motor speed (motorspeed) overshoot shall be lass than or equal to OVTOL\\
 \end{tabular}
 \end{center}
 Starting from an empty requirement he types "\textit{system inertia is}" and the invokes the helper, the results returned by the sentence-Trie is all the possible continuing sentences allowed by the syntax of this section.

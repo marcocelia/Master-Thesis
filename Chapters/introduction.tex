@@ -15,7 +15,7 @@
 \label{sec:devmodels}
 
 
-Every industrial product has its own \textit{life-cycle} which starts when comes out the need of a new product and continues with the requirements identification, design, development and verification processes. Furthermore several other activities regarding the product maintenance could be as well part of the cycle. There are several approaches describing the sequentiality of product life cycle tasks, such as the so called \textit{Waterfall model} (Fig.\ref{fig:waterfall}), in which a phase starts after the completion of the previous one and phases' deliverables follows an unidirectional flows like in a pipeline.
+Every industrial product has its own \textit{life-cycle} which starts with the need of a new product and continues with the requirements capturing, design, development and verification processes. Furthermore several other activities regarding the product maintenance could be as well part of the cycle. There are several approaches describing the sequentiality of product life cycle tasks, such as the so called \textit{Waterfall model} (Fig.\ref{fig:waterfall}), in which a phase starts after the completion of the previous one and phases' deliverables follows an unidirectional flows like in a pipeline.
 \begin{figure}[!h]
 	\centering 
      \includegraphics[width=.75\textwidth]{Figs/waterfall.png} 
@@ -24,7 +24,7 @@ Every industrial product has its own \textit{life-cycle} which starts when comes
 \end{figure} 
 
 A example of the waterfall model we can examine the military standard MIL-STD-2167A, which establish a uniform development model applicable during the whole system life-cycle.
-\par As second alternative  the \textit{V-model} (Fig.\ref{fig:vmodel}) enforces the temporal correlation among developing and validation phases. Activities on the left hand side of the V are associated with models of the system, where each subsequent activity represents an enhancement of the model from the previous activity. Processes on the right hand side of the V correspond to experimental (testing) activities. Results of a test phase validate the structure of the correspondent developing phase.
+\par As second alternative  the \textit{V-model} (Fig.\ref{fig:vmodel}) enforces the temporal correlation among development and validation phases. Activities on the left hand side of the V are associated with models of the system, where each subsequent activity represents an enhancement of the model from a previous activity. Processes on the right hand side of the V correspond to experimental (testing) activities. Results of a test phase validate the structure of the correspondent developing phase.
 
 \begin{figure}[!h]
 	\centering 
@@ -33,7 +33,7 @@ A example of the waterfall model we can examine the military standard MIL-STD-21
      \label{fig:vmodel} 
 \end{figure} 
 
-This work focuses on the first stage of a generic product development model, i.e. Requirement analysis, trying to reduce the gap also with its relative validation.
+This work focuses on the first stage of a generic product development model, i.e. Requirement analysis, trying to reduce the gap also with its relative verification.
 
 %********************************** % Section  **************************************
 \section{Requirements Fundamentals}
@@ -43,14 +43,10 @@ This work focuses on the first stage of a generic product development model, i.e
 system is needed, based on current and foreseen conditions, which may be internal operations or an external market. It must say what system features will serve and satisfy this context. And it must say h ow the
 system is to be constructed..." — Doug Ross \citep{ross1977structured}
 \end{quote}
-Regardless of the adopted development model, the first, and critical, step to approach a product development is the System Requirement specification. It is much more than a functional specification, it is the groundwork for all the future stages and hence it has to catch everything is needed in terms of performance, behaviors and constraints to be satisfied. 
+Regardless of the adopted development model, the most important step to approach a product development is the System Requirement specification. It is much more than a functional specification, it is the groundwork for all the future stages and, hence, it has to catch everything is needed in terms of performance, behaviors and constraints to be satisfied. 
 \par Being the requirement analysis the fundamental step that drives the design and implementation phases it is also worth noting how errors at this stage, \textit{late} errors, are much more costly in terms of time to be fixed than \textit{early} errors. The DoD Software Technology Plan \citep{DoD91} states that "early defect fixes are typically two orders of magnitude cheaper than late defect fixes, and the early requirements and design defects typically leave more serious operational consequences."
 
-\subsection{Guidelines}
-
-
-The result of the system requirements specification process is an
-unambiguous and complete specification document. It should help:
+\paragraph{Guidelines} The result of the system requirements specification process is an unambiguous and complete specification document. It should help:
 \begin{enumerate}[label=\alph*)]
 \item System customers to accurately describe what they wish to obtain;
 \item System suppliers to understand exactly what the customer wants;
@@ -83,10 +79,10 @@ the SRS provides a baseline against which compliance can be measured.
 while the MIL-STD-498 \citep{united1994mil} was a United States military standard whose purpose was to establish uniform requirements for systems development and documentation. Those standards rather than automatic tools are sort of guidelines to achieve a good specification for the system.
 
 \subsection{Requirement Specification languages}
-As said above, the requirement document quite often serves as a "contract" between designers and the costumers, as such it has to be somehow understandable also from those people having a non technical background, so quite often they are given with many pages of natural language descriptions, sometimes flanked with manually derived diagrams that represent the structure of the design. Due to its nature, the natural language specification of a property could be very far, and sometimes totally unrelated, from a formal definition. For instance natural language could be lacking, redundant or misleading, even worse the requirement definition is generally the result of an empirical process subjected to ambiguity, subjectivity and imprecisions.
+As said above, the requirements document quite often serves as a "contract" between designers and the costumers, as such it has to be somehow understandable also from those people having a non technical background. Hence, quite often requirements are given with many pages of natural language descriptions, sometimes flanked with manually derived diagrams that represent the structure of the design. Due to its nature, the natural language specification of a property could be very far, and sometimes totally unrelated, from a formal definition. For instance natural language could be lacking, redundant or misleading, even worse the requirement definition is generally the result of an empirical process subjected to ambiguity, subjectivity and imprecisions.
 \par The literature provides several methods aiming to avoid bad-formed requirements, all of them are based on the addition of a certain degree of formality in the syntax used to define the property referring a specific requirement. The most general classification of the specification languages is into \textit{formal}, \textit{semi-formal} and \textit{informal}.
 \par A language is formal if its syntax and semantic are defined in a rigorous mathematical way. A formally expressed requirement provides an high level of verifiability, furthermore the process of translating natural into formal language requires the analysts to improve their comprehension of the requirement semantic. In fact, in order for the translation to be successful they have to verify, and eventually eliminate, the presence of ambiguities also from the natural language definition.
-\par Semi-formal languages are usually expressed in a graphical manner, aimed to provide a non-ambiguous description through a generally easier syntax that has not a direct mapping to a mathematical semantic. The \textit{structured natural language}, which will be of interest in below discussions, could be in turn part of this category. In particular it could be view as a plain text which has some constraint in the precedence of sentences participants.%ref to UML-SysML??
+\par Semi-formal languages are usually expressed in a graphical manner, aimed to provide a non-ambiguous description through a generally easier syntax that has not a direct mapping to a mathematical semantic. The \textit{structured natural language}, which will be of interest in below discussions, could be in turn part of this category. In particular, it could be view as a plain text which has some constraint in the precedence of sentences participants.%ref to UML-SysML??
 \par Informal languages are those that have neither a rigorous syntax or rigorous semantic. In particular the syntax is derived from the relative grammatic and the semantic is that rich that makes impossible its formalization. Despite all this, they are the most commonly used, and, hence, a good specification always relies on the experience of designers.
 
 \subsection{Readability versus Formality}

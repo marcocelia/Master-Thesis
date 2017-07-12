@@ -160,7 +160,7 @@ of time stamped values of the form $(t, s[t])$. Although the semantics of the lo
 
 \paragraph{} We can define an STL formula as a MITL$_{[a,b]}$ formula over the atomic propositions $\mu_1(s(t)),\dots,\mu_m(s(t))$, where each $\mu_i$ is a predicate of the form $\mu_i:\mathbb{R}^n\rightarrow\mathbb{B}$. The monitoring process for STL formula decomposes hence into two phases, in which the first is always the construction of a Boolean “filter” for every $\mu_i \in U = \{\mu_1 , \dots ,\mu_m \}$, which transforms $s$ into a Boolean signal $p_i = \mu_i(s)$.
 
-\subsection{Summary}
+%\subsection{Summary}
 
 \section{Patterns Identification}
 
@@ -237,12 +237,16 @@ After $Q$ unitl $R$ & \textbf{AG}($Q\;\&\;\neg R \rightarrow$ \textbf{A}($P$ \te
 
 When dealing with complex systems quite often the requirements analysis is performed at different levels of abstraction. As result the complete specification is provided by many requirements documents, in which requirements of a certain level are grouped according to derivation from a \textit{parent requirement} belonging to an higher level. 
 \par A typical scenario for control systems is that high-level requirements focus all those properties specific of that application domain. Examples are the so called \textit{performance requirements}, which assess features of the system response over time. Since they refer properties having a well-known mathematical representation such kind of requirements in turn are prone to have a parameterizable definition. In other words they are suitable to become domain specific patterns.
-\par Two typical performance requirements expressed in natural language are the following
+\par A typical performance requirement expressed in natural language is the following
 \begin{quote}
-\begin{enumerate}
 \label{en:ptreq}
-\item \textit{The Driver System (DRV) shall accelerate the motor from zero to $x_1$ rpm in less than $t_1$ sec, with an overshoot of less than $x_2$ rpm  and a time to settle to within $\pm x_3$ rpm of $x_4$ rpm of less than $t_2$ ms with a system inertia less than or equal to $S_{In}$}
-\item \textit{The Driver System (DRV) shall decelerate the motor from $x_1$ to zero rpm in less than $t_1$ sec, with an undershoot of less than $x_2$ rpm and a time to settle to within $\pm x_3$ rpm of  zero rpm of less than $t_2$ ms with a system inertia less than or equal to $S_{In}$}
+\textit{The controller system of the motor with inertia less than $S_{In}$ should track a step speed command from zero to $x_4$ with:}
+\begin{enumerate}
+\item \textit{Settling time less than $t_2$}
+\item \textit{Time Speed acceleration from zero to $x_1$ less than $t_1$ }
+\item \textit{Overshoot less than $x_2$}
+\item \textit{Time Speed deceleration from zero to $x_1$ less than $t_1$ }
+\item \textit{Undershoot less than $x_2$}
 \end{enumerate}
 \end{quote} 
 An informal definition of the addressed requirements is the following
